@@ -24,7 +24,7 @@ def tableFull():
 
 def getAllStaff():
     view.showInfo('blue', ' ОБЩИЙ СПИСОК СОТРУДНИКОВ: ')
-    with open('table.csv', 'r', encoding='UTF8', newline='') as f:
+    with open('Staff\Eighth_LLC\TABLES\staff_table.csv', 'r', encoding='UTF8', newline='') as f:
         reader = csv.reader(f)
         for row in reader:
             view.printAny(' '.join(row))
@@ -108,12 +108,12 @@ def deleteStaff():
     
 
 def exportTable(table):
-    with open('table.csv', 'w', encoding='UTF8') as f:
+    with open('Staff\Eighth_LLC\TABLES\staff_table.csv', 'w', encoding='UTF8') as f:
         f.write(str(table))
 
 
 def importTable():
-        with open('table.csv', 'r', encoding='UTF8', newline='') as f:
+        with open('Staff\Eighth_LLC\TABLES\staff_table.csv', 'r', encoding='UTF8', newline='') as f:
             reader = csv.reader(f)
             for row in reader:
                 print(*row)
